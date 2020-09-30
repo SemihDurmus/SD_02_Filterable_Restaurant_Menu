@@ -106,7 +106,7 @@ body {
 
 .photo-container {
     overflow: hidden;
-    border: 3px solid #778ca3;
+    /* border: 3px solid #778ca3; */
     border: 1px solid #FFF;
     border-radius: 2rem;
     width: 40%;
@@ -126,14 +126,18 @@ body {
 .item-info header{
     display: flex;
     justify-content: space-between;
-    border-bottom: 2px dotted #778ca3;
-    border-bottom: 2px dotted #FFF;
+    /* border-bottom: 2px dotted #778ca3; */
+    border-bottom: 1px solid #57606f;
     padding-bottom: 0.5rem;
 }
 
 .item-info header h4 {
     font-family: 'Lobster', cursive;
     font-size: 2rem;
+}
+
+.item-info .price {
+    color: #57606f;
 }
 
 .item-info .item-text{
@@ -190,15 +194,12 @@ body {
     .menu .center {
         grid-template-columns: minmax(0, 1fr);
     }
-    .menu-item {
-        max-height: 25rem;
-    }
 
     .item-info header h4 {
         font-size: 2.5rem;
     }
     .item-info .item-text{
-        font-size: 2.2rem;
+        font-size: 1.8rem;
     }
 }
 
