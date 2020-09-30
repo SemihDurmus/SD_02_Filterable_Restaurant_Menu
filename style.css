@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    width: 100%;
+    width: 100vw;
     height: auto;
     display: flex;
     align-items: center;
@@ -21,7 +21,8 @@ body {
 
 .menu {
     width: 100%;
-    max-width: 1170px;
+    max-width: 1200px;
+    background-color: darkgreen;
 }
 
 /* ------------TITLE----------- */
@@ -87,17 +88,17 @@ body {
 /* ------------MAIN ITEMS----------- */
 
 
-.center {
+.menu .center {
+    width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     grid-gap: 1.5rem;
+    background-color: cyan;
 }
 
 .menu-item {
     background-color: #f5e9cc;
     display: flex;
-    align-items: stretch;
     justify-content: space-between;
     padding: 1rem;
     max-height: 20rem;
@@ -109,7 +110,7 @@ body {
     overflow: hidden;
     border: 3px solid #778ca3;
     border-radius: 2rem;
-    width: 35%;
+    width: 40%;
 }
 
 .photo-container .photo {
@@ -137,8 +138,67 @@ body {
 .item-info .item-text{
     font-size: 1.5rem;
     margin-top: 1rem;
+    text-align: justify;
     font-family: 'Open Sans Condensed', sans-serif;
 }
 
+
+@media screen and (max-width: 1000px) {
+    html {
+        font-size: 9px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 8px;
+    }
+    .filter-btn {
+        margin: 2%;
+        font-size: 1.5rem;
+    }
+    .menu .center {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .menu-item {
+        max-height: 25rem;
+    }
+
+    .item-info header h4 {
+        font-size: 2.5rem;
+    }
+    .item-info .item-text{
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 485px) {
+    html {
+        font-size: 6px;
+    }
+    .title h2{
+        color:rgb(211, 84, 0);
+        font-size: 5rem;
+        font-family: 'Lobster', cursive;
+    }
+    .filter-btn {
+        margin: 1%;
+        font-size: 1.5rem;
+        box-sizing: content-box;
+    }
+    .menu .center {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .menu-item {
+        max-height: 25rem;
+    }
+
+    .item-info header h4 {
+        font-size: 2.5rem;
+    }
+    .item-info .item-text{
+        font-size: 2.2rem;
+    }
+}
 
 
